@@ -26,44 +26,10 @@ Your browser does not support the HTML5 canvas tag.
   </div>
   
   <script>
-    var c = document.getElementById('myCanvas');
-    var ctx = c.getContext("2d");
-
-    // Main face (big circle)
-
-    ctx.beginPath();
-    ctx.arc(150, 150, 100, 0, 2 * Math.PI);
-    ctx.fillStyle = "yellow";
-    ctx.fill();
-    ctx.stroke();
-    ctx.closePath();
-
-    // Smile
-
-    ctx.beginPath();
-    ctx.arc(150, 150, 75, 0, Math.PI);
-    ctx.lineWidth = 10;
-    ctx.stroke();
-    ctx.closePath();
-
-    // Left eye
-
-    ctx.beginPath();
-    ctx.arc(110, 110, 20, 0, 2 * Math.PI);
-    ctx.fillStyle = "black";
-    ctx.lineWidth = 1;
-    ctx.fill();
-    ctx.stroke();
-    ctx.closePath();
-
-    // Right eye
-
-    ctx.beginPath();
-    ctx.fillStyle = "black";
-    ctx.fill();
-    ctx.stroke();
-    ctx.closePath();
-
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var img = document.getElementById("scream");
+ctx.drawImage(img, 10, 10); 
   </script>
 
 </body>

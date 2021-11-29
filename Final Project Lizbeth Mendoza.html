@@ -4,111 +4,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
-/* Add a gray background color with some padding */
 body {
-  font-family: Arial;
+  background-image: url(/img/background.gif);
   padding: 20px;
-  background: #00FF00;  
+  font-family: Times New Roman;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
+h1 {
+  font-size: 50px;
+  word-break: break-all;
 }
 
-/* Right column */
-.rightcolumn {
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
   float: left;
   width: 25%;
-  padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
-
-/* Clear floats after the columns */
+/* Clear floats after rows */ 
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+/* Content */
+.content {
+  background-color: rgb(219, 190, 195);
+  padding: 10px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    padding: 0;
   }
 }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
+<!-- MAIN (Center website) -->
+<div class="main">
 
+<h1>Briana's Portfolio</h1>
+<hr>
+
+<h2>This personal blog will be about the people I love most in my life.</p>
+
+<!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  <div class="column">
+    <div class="content">
+      <img src="/img/dog.gif" alt="dog" style="width:100%">
+      <h3>Max</h3>
+      <p>This is max. I've had him since I was 12 and I love him dearly. He is my child and I am sticking to it.</p>
     </div>
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+  <div class="column">
+    <div class="content">
+    <img src="/img/Nephew.gif" alt="Lights" style="width:100%">
+      <h3>Isaac</h3>
+      <p>This is Isaac my nephew and he is always up to something.There is never a bored moment and I love him so much.</p>
     </div>
-    <div class="card">
-      
-<div class="footer">
-  <h2>Footer</h2>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/img/Nephew2.gif" alt="Nature" style="width:100%">
+      <h3>Aiden</h3>
+      <p>This is aiden and he is the sweetest but if you say no he will just ignore you or fall over. He is the one making sure Isaac doesnt get into trouble.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/img/Mother.gif" alt="Mountains" style="width:100%">
+      <h3>My Mother</h3>
+      <p>This is my beautiful mother Susana.She is the sweetest and I wouldn't change anything about her.</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+
+<!-- END MAIN -->
 </div>
 
 </body>
 </html>
+
